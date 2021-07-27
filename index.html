@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>R. Line</title>
+</head>
+<body>
+<h1> Radom line generator! </h1>
+<br>
+<br>
+<button id="btnOne" onclick="generate()"> Click to Generate </button><br><br>
+<input type="text" id="line">
+<button id="btnTwo" onclick="copy()">COPY</button>
+<style>
+body {
+color: white;
+font-size: 30px;
+padding: 0;
+background-color: black;
+text-align: center;
+}
+#btnTwo {
+height: 40px;
+width: 100px;
+background: pink;
+color: black;
+font-size: 20px;
+cursor: pointer;
+transition: 0.2s ease;
+border: 2px solid white;
+}
+#btnTwo:hover {
+background: purple;
+font-size: 22px;
+}
+#line {
+height: 30px;
+width: 500px;
+border: 2px solid pink;
+font-size: 20px;
+font-family: sans-serif;
+}
+#btnOne {
+height: 60px;
+width: 300px;
+background: purple;
+color: black;
+font-size: 30px;
+cursor: pointer;
+border: 2px solid white;
+transition: 0.2s ease;
+}
+#btnOne:hover {
+background: pink;
+font-size: 32px;
+}
+</style>
+<script>
+const arr = ["Nice", "Wow", "Amazing", "Great", "Best", "Awesome"];
+const arrTwo = ["Job", "Work", "Efforts", "One"];
+const arrThree = ["Sir", "Dude", "Friend", "My friend", "Dear"];
+const arrFour = [".", "...", "!", " :)", " :0", " lol", "!!", "...!", " haha", " :("];
+var min = 0;
+var max = arr.length-1;
+var maxTwo = arrTwo.length-1;
+var maxThree = arrThree.length-1;
+var maxFour = arrFour.length-1;
+
+function generate() {
+var random = Math.floor(Math.random() * (max-min+1)+min);
+var randomTwo = Math.floor(Math.random() * (maxTwo-min+1)+min);
+var randomThree = Math.floor(Math.random() * (maxThree-min+1)+min);
+var randomFour = Math.floor(Math.random() * (maxFour-min+1)+min);
+var sentence = arr[random]+" "+arrTwo[randomTwo]+", "+arrThree[randomThree]+arrFour[randomFour];
+document.getElementById("line").value=sentence;
+}
+function copy() {
+var copyText = document.getElementById("line");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  document.getElementById("line").value="COPIED!";
+}
+</script>
+</body>
+</html>
