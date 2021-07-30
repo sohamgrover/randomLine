@@ -88,15 +88,17 @@ const arr = [
   "Stupendous", 
   "Staggering", 
   "Extra-ordinary", 
-  "unbelieveable", 
-  "impressive", 
-  "badass", 
-  "Spectacular"
+  "Unbelieveable", 
+  "Impressive", 
+  "Bingo", 
+  "Spectacular",
+  "Precious",
+  "Splendid"
 ];
 const arrTwo = ["Job", "Work", "Efforts", "One", ""];
 const arrThree = ["Sir", "Dude", "Friend", "My friend", "Dear", ""];
 const arrFour = [".", "...", "!", " :)", " :0", " lol", "!!", "...!", " haha", " :("];
-const arrFourOne = ["Hmm...", "By the way", "and", "So", "Therefore,", "cause", "Lastly,", "Also,", "Furthermore,", "In addition,"];
+const arrFourOne = ["Hmm...", "By the way", "and", "So", "Therefore,", "cause", "Lastly,", "Also,", "Furthermore,", "In addition,", "From now on", "Line:", "", "Winner:", "yay!"];
 const arrFive = [
   "I hope I win", 
   "Maybe I will win", 
@@ -118,6 +120,33 @@ const arrFive = [
   "I am excited for the result",
   "This is nice work. i am excited",
   "I am very very excited",
+  "How much excited am I",
+  "Excitement level: infinte",
+  "I have more than 5k comments",
+  "This makes me feel nice and this is very good",
+  "It can reach great heights",
+  "You will grow you channel a lot",
+  "You channel will boom soon",
+  "How can I help? I wanna win",
+  "let me win",
+  "lemme win",
+  "If I win, mail me at sohamgrover0",
+  "This is very great. I will win for sure",
+  "I am not a human",
+  "I am happy right now",
+  "Thanks for chosing me as the winner", 
+  "Thank you so much for making me the winner",
+  "This is not bad, it is good",
+  "lemme tryna win",
+  "this is dope", 
+  "noice",
+  "nice", 
+  "c'mon bro", 
+  "sheeets, noice", 
+  "ye boi hehe", 
+  "M'winner", 
+  "im the winner yay",
+  "this is mine cause i won"
 ];
 const arrSix = [".", "...", "!", " :)", " :0", " lol", "!!", "...!", " haha", " :("];
 
@@ -138,7 +167,7 @@ var randomFour = Math.floor(Math.random() * (maxFour-min+1)+min);
 var randomFourOne = Math.floor(Math.random() * (maxFourOne-min+1)+min);
 var randomFive = Math.floor(Math.random() * (maxFive-min+1)+min);
 var randomSix = Math.floor(Math.random() * (maxSix-min+1)+min);
-var sentence = arr[random]+" "+arrTwo[randomTwo]+", "+arrThree[randomThree]+arrFour[randomFour]+" "+arrFourOne[randomFourOne]+""+arrFive[randomFive]+arrSix[randomSix];
+var sentence = arr[random]+" "+arrTwo[randomTwo]+", "+arrThree[randomThree]+arrFour[randomFour]+" "+arrFourOne[randomFourOne]+" "+arrFive[randomFive]+arrSix[randomSix];
 document.getElementById("line").value=sentence;
 }
 function copy() {
