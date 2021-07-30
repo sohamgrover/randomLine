@@ -167,11 +167,21 @@ var randomFour = Math.floor(Math.random() * (maxFour-min+1)+min);
 var randomFourOne = Math.floor(Math.random() * (maxFourOne-min+1)+min);
 var randomFive = Math.floor(Math.random() * (maxFive-min+1)+min);
 var randomSix = Math.floor(Math.random() * (maxSix-min+1)+min);
-var randomSentence = Math.floor(Math.random()*3)
-alert(randomSentence);
-  
+var randomSentence = Math.floor(Math.random()*4)
+
+if (randomSentence==1) {
+var sentence = arr[random];
+}
+  else if (randomSentence==2) {
+  var sentence = arrFive[randomFive];
+  }
+  else if (randomSentence==3) {
 var sentence = arr[random]+" "+arrTwo[randomTwo]+", "+arrThree[randomThree]+arrFour[randomFour]+" "+arrFourOne[randomFourOne]+" "+arrFive[randomFive]+arrSix[randomSix];
 document.getElementById("line").value=sentence;
+  }
+  else {
+var sentence = arr[random]+" "+arrTwo[randomTwo]+", "+arrThree[randomThree]+arrFour[randomFour]+" "+arrFourOne[randomFourOne]=" "+arrFive[randomFive]+arrSix[randomSix];
+  }
 }
 function copy() {
 var copyText = document.getElementById("line");
