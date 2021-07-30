@@ -93,9 +93,10 @@ const arr = [
   "badass", 
   "Spectacular"
 ];
-const arrTwo = ["Job", "Work", "Efforts", "One"];
-const arrThree = ["Sir", "Dude", "Friend", "My friend", "Dear"];
+const arrTwo = ["Job", "Work", "Efforts", "One", ""];
+const arrThree = ["Sir", "Dude", "Friend", "My friend", "Dear", ""];
 const arrFour = [".", "...", "!", " :)", " :0", " lol", "!!", "...!", " haha", " :("];
+const arrFourOne = ["Hmm...", "By the way", "and", "So", "Therefore,", "cause", "Lastly,", "Also,", "Furthermore,", "In addition,"];
 const arrFive = [
   "I hope I win", 
   "Maybe I will win", 
@@ -112,7 +113,11 @@ const arrFive = [
   "This is also my favourite video",
   "I am sure I will win this ring light, but there is a big possibility that i will get both of them!",
   "wow. This is a little underrate",
-  "I'll win for sure",
+  "How are you",
+  "You have grow your channel a lot. Congratulations for that",
+  "I am excited for the result",
+  "This is nice work. i am excited",
+  "I am very very excited",
 ];
 const arrSix = [".", "...", "!", " :)", " :0", " lol", "!!", "...!", " haha", " :("];
 
@@ -121,6 +126,7 @@ var max = arr.length-1;
 var maxTwo = arrTwo.length-1;
 var maxThree = arrThree.length-1;
 var maxFour = arrFour.length-1;
+var maxFourOne = arrFourOne.length-1;
 var maxFive = arrFive.length-1;
 var maxSix = arrSix.length-1;
 
@@ -129,9 +135,10 @@ var random = Math.floor(Math.random() * (max-min+1)+min);
 var randomTwo = Math.floor(Math.random() * (maxTwo-min+1)+min);
 var randomThree = Math.floor(Math.random() * (maxThree-min+1)+min);
 var randomFour = Math.floor(Math.random() * (maxFour-min+1)+min);
+var randomFourOne = Math.floor(Math.random() * (maxFourOne-min+1)+min);
 var randomFive = Math.floor(Math.random() * (maxFive-min+1)+min);
 var randomSix = Math.floor(Math.random() * (maxSix-min+1)+min);
-var sentence = arr[random]+" "+arrTwo[randomTwo]+", "+arrThree[randomThree]+arrFour[randomFour]+" "+arrFive[randomFive]+arrSix[randomSix];
+var sentence = arr[random]+" "+arrTwo[randomTwo]+", "+arrThree[randomThree]+arrFour[randomFour]+" "arrFourOne[randomFourOne]+""+arrFive[randomFive]+arrSix[randomSix];
 document.getElementById("line").value=sentence;
 }
 function copy() {
