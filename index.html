@@ -39,6 +39,7 @@ width: 500px;
 border: 2px solid pink;
 font-size: 20px;
 font-family: sans-serif;
+display: none;
 }
 #btnOne {
 height: 60px;
@@ -188,6 +189,7 @@ var sentence = arr[random]+" "+arrTwo[randomTwo]+", "+arrThree[randomThree]+arrF
   else {
     
   }
+document.getElementById("line").style.display="inline";
 document.getElementById("line").value=sentence;
 }
 function copy() {
@@ -196,6 +198,7 @@ var copyText = document.getElementById("line");
   copyText.setSelectionRange(0, 99999)
   document.execCommand("copy");
   document.getElementById("line").value="";
+  document.getElementById("line").style.display="none";
 }
 </script>
 </body>
