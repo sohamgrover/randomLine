@@ -95,11 +95,19 @@ const arr = [
   "Bingo", 
   "Spectacular",
   "Precious",
-  "Splendid"
+  "Splendid",
+  "Tasty", 
+  "Delicious",
+  "Tight",
+  "Black",
+  "Dark", 
+  "Light",
+  "Famous",
+  "White"
 ];
 const arrTwo = ["Job", "Work", "Efforts", "One", ""];
-const arrThree = ["Sir", "Dude", "Friend", "My friend", "Dear", ""];
-const arrFour = [".", "...", "!", " :)", " :0", " lol", "!!", "...!", " haha", " :("];
+const arrThree = ["Sir", "Dude", "Friend", "My friend", "Dear", "Bhai", "Boi", "Bhaiya", "Bestie", "Dost", "Sirji", "Human", ""];
+const arrFour = [".", "...", "!", " :)", " :0", " lol", "!!", "...!", " haha", " :(", ";)", ";(", ";0", "!!!", "?", " "];
 const arrFourOne = ["Hmm...", "By the way", "and", "So", "Therefore,", "cause", "Lastly,", "Also,", "Furthermore,", "In addition,", "From now on", "Line:", "", "Winner:", "yay!"];
 const arrFive = [
   "I hope I win", 
@@ -152,6 +160,11 @@ const arrFive = [
 ];
 const arrSix = [".", "...", "!", " :)", " :0", " lol", "!!", "...!", " haha", " :("];
 
+const arrSecondOne = ["This", "It", "That", "He", "She", "They", "We"];
+const arrSecondTwo = ["is", "was", "would be", "will be", "shall be", "maybe", "could be", "should be", "can be", "would have been", "wouldn't have been"];
+const arrSecondThree = arr;
+const arrSecondFour = arrFour;
+
 var min = 0;
 var max = arr.length-1;
 var maxTwo = arrTwo.length-1;
@@ -160,6 +173,12 @@ var maxFour = arrFour.length-1;
 var maxFourOne = arrFourOne.length-1;
 var maxFive = arrFive.length-1;
 var maxSix = arrSix.length-1;
+  
+var maxarrSecondOne = arrSecondOne.length-1;
+var maxarrSecondTwo = arrSecondTwo.length-1;
+var maxarrSecondThree = arrSecondThree.length-1;
+var maxarrSecondFour = arrSecondFour.length-1;
+
 
 function generate() {
 var random = Math.floor(Math.random() * (max-min+1)+min);
@@ -169,7 +188,13 @@ var randomFour = Math.floor(Math.random() * (maxFour-min+1)+min);
 var randomFourOne = Math.floor(Math.random() * (maxFourOne-min+1)+min);
 var randomFive = Math.floor(Math.random() * (maxFive-min+1)+min);
 var randomSix = Math.floor(Math.random() * (maxSix-min+1)+min);
-var randomSentence = Math.floor(Math.random()*4)
+  
+var randomSecondOne = Math.floor(Math.random() * (maxSecondOne-min+1)+min);
+var randomSecondTwo = Math.floor(Math.random() * (maxSecondTwo-min+1)+min);
+var randomSecondThree = Math.floor(Math.random() * (maxSecondThree-min+1)+min);
+var randomSecondFour = Math.floor(Math.random() * (maxSecondFour-min+1)+min);
+
+var randomSentence = Math.floor(Math.random()*5)
 
 if (randomSentence==1) {
 var sentence = arr[random];
@@ -183,12 +208,16 @@ var sentence = arr[random]+" "+arrTwo[randomTwo]+", "+arrThree[randomThree]+arrF
   else if (randomSentence==4) {
 var sentence = arr[random]+" "+arrTwo[randomTwo]+", "+arrThree[randomThree]+arrFour[randomFour]+" "+arrFourOne[randomFourOne]+" "+arrFive[randomFive]+arrSix[randomSix];
   }
+  else if (randomSentence==5) {
+var sentence = arrSecondOne[randomSecondOne]+" "+arrSecondOne[randomSecondTwo]+", "+arrSecondOne[randomSecondThree]+arrSecondOne[randomSecondFour];
+  }
   else if (randomSentence==0) {
 var sentence = arr[random]+" "+arrTwo[randomTwo]+", "+arrThree[randomThree]+arrFour[randomFour]+" "+arrFourOne[randomFourOne]+" "+arrFive[randomFive]+arrSix[randomSix];
   }
   else {
     
   }
+  alert(arrSecondOne[randomSecondOne]+" "+arrSecondOne[randomSecondTwo]+", "+arrSecondOne[randomSecondThree]+arrSecondOne[randomSecondFour]);
 document.getElementById("line").style.display="inline";
 document.getElementById("line").value=sentence;
 }
