@@ -57,6 +57,7 @@ font-size: 32px;
 }
 </style>
 <script>
+ // 1st Set
 const arr = [
   "Nice", 
   "Wow", 
@@ -160,11 +161,37 @@ const arrFive = [
 ];
 const arrSix = [".", "...", "!", " :)", " :0", " lol", "!!", "...!", " haha", " :("];
 
+  
+//2nd Set
 const arrSecondOne = ["This", "It", "That", "He", "She", "They", "We"];
 const arrSecondTwo = ["is", "was", "would be", "will be", "shall be", "maybe", "could be", "should be", "can be", "would have been", "wouldn't have been"];
 const arrSecondThree = arr;
 const arrSecondFour = arrFour;
+  
+ 
+//3rd Set
+const arrThirdOne = [
+  "Is",
+  "Will",
+  "When",
+  "Can",
+  "How",
+  "Why",
+  "Shall",
+  "What",
+  "Should", 
+  "Why",
+  "Could",
+  "Who",
+  "Whom"
+];
+const arrThirdTwo = ["this", "that", "it"];
+const arrThirdThree = ["thing", "video", "vid", "Video", "little thing"];
+const arrThirdFour = arr;
+const arrThirdFive = ["?", ".", "", "??", "...", "!?", "!? :0", "...?", "", " "];
 
+  
+//1st Set
 var min = 0;
 var max = arr.length-1;
 var maxTwo = arrTwo.length-1;
@@ -173,14 +200,20 @@ var maxFour = arrFour.length-1;
 var maxFourOne = arrFourOne.length-1;
 var maxFive = arrFive.length-1;
 var maxSix = arrSix.length-1;
-  
+//2nd Set
 var maxarrSecondOne = arrSecondOne.length-1;
 var maxarrSecondTwo = arrSecondTwo.length-1;
 var maxarrSecondThree = arrSecondThree.length-1;
 var maxarrSecondFour = arrSecondFour.length-1;
-
-
+//3rd Set
+var maxarrThirdOne = arrThirdOne.length-1;
+var maxarrThirdTwo = arrThirdTwo.length-1;
+var maxarrThirdThree = arrThirdThree.length-1;
+var maxarrThirdFour = arrThirdFour.length-1;
+var maxarrThirdFive = arrThirdFive.length-1;
+  
 function generate() {
+//1st Set
 var random = Math.floor(Math.random() * (max-min+1)+min);
 var randomTwo = Math.floor(Math.random() * (maxTwo-min+1)+min);
 var randomThree = Math.floor(Math.random() * (maxThree-min+1)+min);
@@ -188,14 +221,21 @@ var randomFour = Math.floor(Math.random() * (maxFour-min+1)+min);
 var randomFourOne = Math.floor(Math.random() * (maxFourOne-min+1)+min);
 var randomFive = Math.floor(Math.random() * (maxFive-min+1)+min);
 var randomSix = Math.floor(Math.random() * (maxSix-min+1)+min);
-  
+//2nd Set
 var randomSecondOne = Math.floor(Math.random() * (maxarrSecondOne-min+1)+min);
 var randomSecondTwo = Math.floor(Math.random() * (maxarrSecondTwo-min+1)+min);
 var randomSecondThree = Math.floor(Math.random() * (maxarrSecondThree-min+1)+min);
 var randomSecondFour = Math.floor(Math.random() * (maxarrSecondFour-min+1)+min);
-
+//3rd Set
+var randomThirdOne = Math.floor(Math.random() * (maxarrThirdOne-min+1)+min);
+var randomThirdTwo = Math.floor(Math.random() * (maxarrThirdTwo-min+1)+min);
+var randomThirdThree = Math.floor(Math.random() * (maxarrThirdThree-min+1)+min);
+var randomThirdFour = Math.floor(Math.random() * (maxarrThirdFour-min+1)+min);
+var randomThirdFive = Math.floor(Math.random() * (maxarrThirdFive-min+1)+min);
+//Generates a random number for a sentence
 var randomSentence = Math.floor(Math.random()*5)
 
+//Assigns the Sentence Variable a random value
 if (randomSentence==1) {
 var sentence = arr[random];
 }
@@ -212,13 +252,17 @@ var sentence = arr[random]+" "+arrTwo[randomTwo]+", "+arrThree[randomThree]+arrF
 var sentence = arrSecondOne[randomSecondOne]+" "+arrSecondTwo[randomSecondTwo]+" "+arrSecondThree[randomSecondThree]+arrSecondFour[randomSecondFour];
   }
   else if (randomSentence==0) {
-var sentence = arr[random]+" "+arrTwo[randomTwo]+", "+arrThree[randomThree]+arrFour[randomFour]+" "+arrFourOne[randomFourOne]+" "+arrFive[randomFive]+arrSix[randomSix];
+var sentence = arrThirdOne[randomThirdOne]+" "+arrThirdTwo[randomThirdTwo]+", "+arrThirdFour[randomThirdFour]+arrThirdFive[randomFour]+" "+arrFourOne[randomFourOne]+" "+arrFive[randomFive];
   }
   else {
   }
+ alert(arrThirdOne[randomThirdOne]+" "+arrThirdTwo[randomThirdTwo]+", "+arrThirdFour[randomThirdFour]+arrThirdFive[randomFour]+" "+arrFourOne[randomFourOne]+" "+arrFive[randomFive]);
+//Displays The Sentence
 document.getElementById("line").style.display="inline";
 document.getElementById("line").value=sentence;
 }
+  
+//Copy's The Sentence to User's clipboard
 function copy() {
 var copyText = document.getElementById("line");
   copyText.select();
